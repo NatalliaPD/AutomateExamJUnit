@@ -8,7 +8,6 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-import page.CheckOnAllBoxesPage;
 import page.RemoveAllItemsPage;
 import util.BrowserFactory;
 

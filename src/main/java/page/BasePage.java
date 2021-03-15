@@ -5,11 +5,12 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -32,9 +33,8 @@ WebDriver driver;
 		String label = formatter.format(date);
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 		String currrentDir = System.getProperty("user.dir");
-		FileUtils.copyFile(sourceFile, new File(currrentDir + "/screenshots/" + label + ".png"));
-	}
+		FileHandler.copy(sourceFile, new File(currrentDir + "/screenshots/" + label + ".png"));
 	
 }
 
-
+}
